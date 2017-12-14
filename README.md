@@ -1,4 +1,4 @@
-# ABAP-to-PlantUML
+# ABAP-to-PlantUML Diagrams
 Create UML Class and Sequence Diagrams from ABAP Code
 
 ## Summary
