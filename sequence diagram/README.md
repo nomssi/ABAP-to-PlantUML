@@ -13,7 +13,7 @@ Create a source code plug-in to add the local classes in the include YY_SATRA_IN
       INCLUDE YY_SATRA_INCLUDE.
     ENDENHANCEMENT.
 
-1. Add an implicit enhancement at the beginning of Method **SHOW_SEQ_DIAGRAM( )** of class **CL_ATRA_UML_HANDLING** to replace the logic:
+1. Add an implicit enhancement at the beginning of Method **SHOW_SEQ_DIAGRAM( )** of class CL_ATRA_UML_HANDLING to replace the logic:
 
     ENHANCEMENT 2  YY_SATR_SEQUENCE.    "active version
       TRY.
