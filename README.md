@@ -12,5 +12,7 @@ https://blogs.sap.com/2017/04/27/plantuml-diagrams/
 - The diagrams are generated and displayed from the SAP GUI without any further settings.
 - Local class LCL_PLANT_UML implements access to the PlantUML web service.
 
+![export_class](https://github.com/nomssi/abap_to-plantuml/blob/master/class_diagram/uml_export.png)
+
 ## Sequence Diagram from SAT Profile
 https://wiki.scn.sap.com/wiki/display/Snippets/ABAP+Trace+to+PlantUML+Sequence+Diagram
