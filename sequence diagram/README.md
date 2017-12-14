@@ -9,7 +9,8 @@ Three steps are needed to override the standard behavior:
 
 *Goto -> Local Definitions/Implementations -> Local Definitions/Implementations Ctrl+Shift+F6*. 
 
-The definition/implementation of local class LCL_UML_HANDLING is displayed. At the bottom of the source code in include **LS_ABAP_TRACE_DATAD07**, implement an implicit enhancement (source code plug-in) to insert the new include:
+The definition/implementation of local class LCL_UML_HANDLING is displayed.
+At the bottom of the source code in include **LS_ABAP_TRACE_DATAD07**, implement an implicit enhancement (source code plug-in) to insert the new include:
 
     ENHANCEMENT 1  YY_SATR_SEQUENCE.    "active version
       INCLUDE YY_SATRA_INCLUDE.
