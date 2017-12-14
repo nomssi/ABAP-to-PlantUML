@@ -30,7 +30,7 @@ Transaction SAT records the execution of an ABAP program and provides analysis t
  - loop compaction produces smaller diagrams
  - the plain text output in PlantUML format is an editable representation of the sequence diagram.
 
-## Future Project
+## Future
 
 ABAP Data Model to PlantUML, like 
 https://github.com/Hywan/Database-to-PlantUML
