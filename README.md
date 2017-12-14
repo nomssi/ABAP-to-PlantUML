@@ -27,3 +27,9 @@ Transaction SAT records the execution of an ABAP program and provides analysis t
  - a custom filter displays calls from standard to custom code in addition to the standard filter logic
  - loop compaction produces smaller diagrams
  - the plain text output in PlantUML format is an editable representation of the sequence diagram.
+
+## Future Project
+
+ABAP Data Model to PlantUML, like 
+
+https://github.com/Hywan/Database-to-PlantUML
