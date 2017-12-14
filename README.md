@@ -1,5 +1,7 @@
 # ABAP-to-PlantUML Diagrams
 
+[![Language: ABAP](https://img.shields.io/badge/Language-ABAP-blue.svg?style=flat)](https://www.sap.com/developer/topics/abap-platform.html)
+
 Create expressive PlantUML Class and Sequence Diagrams from ABAP Code and ABAP Trace
 
 Try PlantUML at http://plantuml.com/.
@@ -27,6 +29,24 @@ Transaction SAT records the execution of an ABAP program and provides analysis t
  - a custom filter displays calls from standard to custom code in addition to the standard filter logic
  - loop compaction produces smaller diagrams
  - the plain text output in PlantUML format is an editable representation of the sequence diagram.
+
+### Setup
+- to add the following local classes to class CL_ATRA_UML_HANDLING create a source code plug-in in include LS_ABAP_TRACE_DATAD07 e.g. as implicit enhancement at the end:
+
+    ENHANCEMENT 1  YY_SATR_SEQUENCE.    "active version
+      INCLUDE YY_SATRA_INCLUDE.
+    ENDENHANCEMENT.
+
+ - add an implicit enhancement at the beginning of Method SHOW_SEQ_DIAGRAM( ) of CL_ATRA_UML_HANDLING to replace the logic:
+
+    ENHANCEMENT 2  YY_SATR_SEQUENCE.    "active version
+      TRY.
+          lcl_sequence=>to_diagram( lcl_configuration=>query( ) )->output( ).
+        CATCH cx_dynamic_check INTO DATA(gx_error).
+          MESSAGE gx_error TYPE 'I' DISPLAY LIKE 'E'.  "#EC CI_USE_WANTED
+      ENDTRY.
+      RETURN.
+    ENDENHANCEMENT.
 
 ## Future Project
 
