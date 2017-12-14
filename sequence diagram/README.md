@@ -30,5 +30,5 @@ The definition/implementation of local class LCL_UML_HANDLING is displayed. At t
       RETURN.
     ENDENHANCEMENT.
 
-After activation, your system behavior will have changed. A new customizing popup appears while displaying a sequence diagram
+After activation, a popup appears while displaying a sequence diagram
 ![seq_export_params](https://github.com/nomssi/ABAP-to-PlantUML/blob/master/sequence%20diagram/seq_export_params.png)
