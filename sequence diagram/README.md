@@ -16,10 +16,11 @@ Create a source code plug-in to add the local classes in the include YY_SATRA_IN
 3. Add an implicit enhancement at the beginning of Method **SHOW_SEQ_DIAGRAM( )** of class CL_ATRA_UML_HANDLING to replace the logic:
 
     ENHANCEMENT 2  YY_SATR_SEQUENCE.    "active version
+      DATA lx_error TYPE REF TO cx_root.
       TRY.
           lcl_sequence=>to_diagram( lcl_configuration=>query( ) )->output( ).
-        CATCH cx_dynamic_check INTO DATA(gx_error).
-          MESSAGE gx_error TYPE 'I' DISPLAY LIKE 'E'.  "#EC CI_USE_WANTED
+        CATCH cx_dynamic_check INTO lx_error.
+          MESSAGE lx_error TYPE 'I' DISPLAY LIKE 'E'.  "#EC CI_USE_WANTED
       ENDTRY.
       RETURN.
     ENDENHANCEMENT.
