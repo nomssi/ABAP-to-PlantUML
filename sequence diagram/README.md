@@ -6,7 +6,7 @@
       INCLUDE YY_SATRA_INCLUDE.
     ENDENHANCEMENT.
 
-Add an implicit enhancement at the beginning of Method SHOW_SEQ_DIAGRAM( ) of CL_ATRA_UML_HANDLING to replace the logic:
+- Add an implicit enhancement at the beginning of Method SHOW_SEQ_DIAGRAM( ) of CL_ATRA_UML_HANDLING to replace the logic:
 
     ENHANCEMENT 2  YY_SATR_SEQUENCE.    "active version
       TRY.
