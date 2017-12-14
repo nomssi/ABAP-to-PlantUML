@@ -3,11 +3,10 @@ Class **CL_ATRA_UML_HANDLING** controls the generation of an UML sequence diagra
 ## Setup
 
 Three steps are needed to override the standard behavior:
-1. Create a new Include YY_SATRA_INCLUDE using the following code (Netweaver 7.4 SP05 required, a down port to 7.31 is at the end of this document):
 
-2. Implement include YY_SATRA_INCLUDE.
+1. Create a new Include YY_SATRA_INCLUDE using the code corresponging to you Netweaver release 7.31, 7.40 or later
 
-Create a source code plug-in to add the local classes in the include YY_SATRA_INCLUDE to class CL_ATRA_UML_HANDLING, e.g. as implicit enhancement at the end of include **LS_ABAP_TRACE_DATAD07**:
+2. In class builder for class CL_ATRA_UML_HANDLING *Goto -> Local Definitions/Implementations -> Local Definitions/Implementations Ctrl+Shift+F6*. The definition/implementation of local class LCL_UML_HANDLING is displayed. At the bottom of the source code in include **LS_ABAP_TRACE_DATAD07**, implement an implicit enhancement (source code plug-in) to insert the new include:
 
     ENHANCEMENT 1  YY_SATR_SEQUENCE.    "active version
       INCLUDE YY_SATRA_INCLUDE.
@@ -15,8 +14,9 @@ Create a source code plug-in to add the local classes in the include YY_SATRA_IN
 
 3. Add an implicit enhancement at the beginning of Method **SHOW_SEQ_DIAGRAM( )** of class CL_ATRA_UML_HANDLING to replace the logic:
 
-    ENHANCEMENT 2  YY_SATR_SEQUENCE.    "active version
-      DATA lx_error TYPE REF TO cx_root.
+    ENHANCEMENT 2  YY_SATRA_SEQUENCE.    "active version
+      
+      DATA lx_error TYPE REF TO cx_dynamic_check.
       TRY.
           lcl_sequence=>to_diagram( lcl_configuration=>query( ) )->output( ).
         CATCH cx_dynamic_check INTO lx_error.
