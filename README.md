@@ -22,8 +22,7 @@ Transaction SAT records the execution of an ABAP program and provides analysis t
 
  - Start transaction SAT -> Evaluate -> Double Click on a measurement; on the next screen press F8 (Display measurement as UML sequence diagram)
  
- This version addresses some shortcomings of the SAP standard sequence diagram generation from ABAP run-time measurements:
-
+ ### Features
  - a secondary internal table index speeds up parsing
  - a custom filter displays calls from standard to custom code in addition to the standard filter logic
  - loop compaction produces smaller diagrams
