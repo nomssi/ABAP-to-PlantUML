@@ -17,9 +17,9 @@ The definition/implementation of local class LCL_UML_HANDLING is displayed. At t
 
 3. Add an implicit enhancement at the beginning of Method **SHOW_SEQ_DIAGRAM( )** of class CL_ATRA_UML_HANDLING to replace the logic:
 
-
+    
     ENHANCEMENT 2  YY_SATRA_SEQUENCE.    "active version
-      
+    
       DATA lx_error TYPE REF TO cx_dynamic_check.
       TRY.
           lcl_sequence=>to_diagram( lcl_configuration=>query( ) )->output( ).
