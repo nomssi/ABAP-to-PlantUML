@@ -1,10 +1,11 @@
 # ABAP-to-PlantUML Diagrams
-Create UML Class and Sequence Diagrams from ABAP Code
 
-## Summary
-Diagrams are more expressive than code but tools are needed. Try PlantUML at http://plantuml.com/.
+Create expressive PlantUML Class and Sequence Diagrams from ABAP Code and ABAP Trace
 
-## Export Class Diagram
+Try PlantUML at http://plantuml.com/.
+
+
+## Class Diagram from ABAP Code
 
 https://blogs.sap.com/2017/04/27/plantuml-diagrams/
 
