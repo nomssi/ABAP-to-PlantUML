@@ -29,3 +29,5 @@ The definition/implementation of local class LCL_UML_HANDLING is displayed. At t
       ENDTRY.
       RETURN.
     ENDENHANCEMENT.
+
+After activation, your system behavior will have changed. A new customizing popup appears while displaying a sequence diagram
