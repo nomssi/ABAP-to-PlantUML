@@ -13,1535 +13,6 @@
     <FIXPT>X</FIXPT>
     <UCCHECK>X</UCCHECK>
    </PROGDIR>
-   <DYNPROS>
-    <item>
-     <HEADER>
-      <PROGRAM>ZZ_UML_CLASS_EXPORT</PROGRAM>
-      <SCREEN>0510</SCREEN>
-      <LANGUAGE>D</LANGUAGE>
-      <DESCRIPT>SEL_SCREEN 0510 INFO:170000360000000000000000000126624248604</DESCRIPT>
-      <TYPE>J</TYPE>
-      <NEXTSCREEN>0510</NEXTSCREEN>
-      <CURSOR_POS>SEL_SCREEN 0510 INFO:170000360000000000000000000126624248604</CURSOR_POS>
-      <LINES>200</LINES>
-      <COLUMNS>120</COLUMNS>
-      <KEEP_SCPOS>X</KEEP_SCPOS>
-     </HEADER>
-     <CONTAINERS>
-      <RPY_DYCATT>
-       <TYPE>SCREEN</TYPE>
-       <NAME>SCREEN</NAME>
-      </RPY_DYCATT>
-     </CONTAINERS>
-     <FIELDS>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>FRAME_TMPL</TYPE>
-       <NAME>%BSC1001_BLOCK_0510</NAME>
-       <TEXT>___________________________________________________________________________________________________________________</TEXT>
-       <LINE>001</LINE>
-       <COLUMN>001</COLUMN>
-       <LENGTH>116</LENGTH>
-       <VISLENGTH>116</VISLENGTH>
-       <HEIGHT>004</HEIGHT>
-       <GROUP3>BLK</GROUP3>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_SO_ROOT_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <ROLLING>X</ROLLING>
-       <LINE>002</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>028</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>002</GROUP4>
-       <CXT_MENON>%_SSCR_%_S_SO_ROOT</CXT_MENON>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELLEFT>X</LABELLEFT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_SO_ROOT_%_APP_%-OPTI_PUSH</NAME>
-       <TEXT>________________________________________</TEXT>
-       <ROLLING>X</ROLLING>
-       <LINE>002</LINE>
-       <COLUMN>032</COLUMN>
-       <LENGTH>040</LENGTH>
-       <VISLENGTH>002</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>OPU</GROUP3>
-       <GROUP4>002</GROUP4>
-       <CXT_MENON>%_SSCR_%_S_SO_ROOT</CXT_MENON>
-       <FORMAT>CHAR</FORMAT>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <_--32_DIMENS>X</_--32_DIMENS>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>SO_ROOT-LOW</NAME>
-       <TEXT>________________________________________</TEXT>
-       <ROLLING>X</ROLLING>
-       <LINE>002</LINE>
-       <COLUMN>035</COLUMN>
-       <LENGTH>040</LENGTH>
-       <VISLENGTH>016</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>LOW</GROUP3>
-       <GROUP4>002</GROUP4>
-       <CXT_MENON>%_SSCR_%_S_SO_ROOT</CXT_MENON>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_SO_ROOT_%_APP_%-TO_TEXT</NAME>
-       <TEXT>_____</TEXT>
-       <LINE>002</LINE>
-       <COLUMN>054</COLUMN>
-       <LENGTH>005</LENGTH>
-       <VISLENGTH>005</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TOT</GROUP3>
-       <GROUP4>002</GROUP4>
-       <CXT_MENON>%_SSCR_%_S_SO_ROOT</CXT_MENON>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELLEFT>X</LABELLEFT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>SO_ROOT-HIGH</NAME>
-       <TEXT>________________________________________</TEXT>
-       <ROLLING>X</ROLLING>
-       <LINE>002</LINE>
-       <COLUMN>060</COLUMN>
-       <LENGTH>040</LENGTH>
-       <VISLENGTH>016</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>HGH</GROUP3>
-       <GROUP4>002</GROUP4>
-       <CXT_MENON>%_SSCR_%_S_SO_ROOT</CXT_MENON>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <PROPERTIES>&lt;TextField&gt;&lt;Name&gt;%_SO_ROOT_%_APP_%-TEXT&lt;/Name&gt;&lt;/TextField&gt;</PROPERTIES>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>PUSH_TMPL</TYPE>
-       <NAME>%_SO_ROOT_%_APP_%-VALU_PUSH</NAME>
-       <TEXT>________________________________________</TEXT>
-       <LINE>002</LINE>
-       <COLUMN>077</COLUMN>
-       <LENGTH>040</LENGTH>
-       <VISLENGTH>003</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>VPU</GROUP3>
-       <GROUP4>002</GROUP4>
-       <PUSH_FCODE>%00205100003943846</PUSH_FCODE>
-       <CXT_MENON>%_SSCR_%_S_SO_ROOT</CXT_MENON>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_SO_DEVC_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <ROLLING>X</ROLLING>
-       <LINE>003</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>028</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>003</GROUP4>
-       <CXT_MENON>%_SSCR_%_S_SO_DEVC</CXT_MENON>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELLEFT>X</LABELLEFT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_SO_DEVC_%_APP_%-OPTI_PUSH</NAME>
-       <TEXT>________________________________________</TEXT>
-       <ROLLING>X</ROLLING>
-       <LINE>003</LINE>
-       <COLUMN>032</COLUMN>
-       <LENGTH>040</LENGTH>
-       <VISLENGTH>002</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>OPU</GROUP3>
-       <GROUP4>003</GROUP4>
-       <CXT_MENON>%_SSCR_%_S_SO_DEVC</CXT_MENON>
-       <FORMAT>CHAR</FORMAT>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <_--32_DIMENS>X</_--32_DIMENS>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>SO_DEVC-LOW</NAME>
-       <TEXT>______________________________</TEXT>
-       <ROLLING>X</ROLLING>
-       <LINE>003</LINE>
-       <COLUMN>035</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>016</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>LOW</GROUP3>
-       <GROUP4>003</GROUP4>
-       <CXT_MENON>%_SSCR_%_S_SO_DEVC</CXT_MENON>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <POSS_ENTRY>1</POSS_ENTRY>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_SO_DEVC_%_APP_%-TO_TEXT</NAME>
-       <TEXT>_____</TEXT>
-       <LINE>003</LINE>
-       <COLUMN>054</COLUMN>
-       <LENGTH>005</LENGTH>
-       <VISLENGTH>005</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TOT</GROUP3>
-       <GROUP4>003</GROUP4>
-       <CXT_MENON>%_SSCR_%_S_SO_DEVC</CXT_MENON>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELLEFT>X</LABELLEFT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>SO_DEVC-HIGH</NAME>
-       <TEXT>______________________________</TEXT>
-       <ROLLING>X</ROLLING>
-       <LINE>003</LINE>
-       <COLUMN>060</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>016</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>HGH</GROUP3>
-       <GROUP4>003</GROUP4>
-       <CXT_MENON>%_SSCR_%_S_SO_DEVC</CXT_MENON>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <POSS_ENTRY>1</POSS_ENTRY>
-       <PROPERTIES>&lt;TextField&gt;&lt;Name&gt;%_SO_DEVC_%_APP_%-TEXT&lt;/Name&gt;&lt;/TextField&gt;</PROPERTIES>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>PUSH_TMPL</TYPE>
-       <NAME>%_SO_DEVC_%_APP_%-VALU_PUSH</NAME>
-       <TEXT>________________________________________</TEXT>
-       <LINE>003</LINE>
-       <COLUMN>077</COLUMN>
-       <LENGTH>040</LENGTH>
-       <VISLENGTH>003</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>VPU</GROUP3>
-       <GROUP4>003</GROUP4>
-       <PUSH_FCODE>%00305100003943846</PUSH_FCODE>
-       <CXT_MENON>%_SSCR_%_S_SO_DEVC</CXT_MENON>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEXT</TYPE>
-       <NAME>%_17SNJ0003943846_%_%_%_%_%_%_</NAME>
-       <TEXT>-</TEXT>
-       <LINE>005</LINE>
-       <COLUMN>001</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP4>SRI</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>OKCODE</TYPE>
-       <NAME>SSCRFIELDS-UCOMM</NAME>
-       <TEXT>______________________________________________________________________</TEXT>
-       <LENGTH>020</LENGTH>
-       <VISLENGTH>070</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <FORMAT>CHAR</FORMAT>
-       <FROM_DICT>X</FROM_DICT>
-       <FOREIGNKEY>X</FOREIGNKEY>
-       <INPUT_FLD>X</INPUT_FLD>
-      </RPY_DYFATC>
-     </FIELDS>
-     <FLOW_LOGIC>
-      <RPY_DYFLOW>
-       <LINE>PROCESS BEFORE OUTPUT.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_INIT_PBO_J.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_PBO_REPORT.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_PF_STATUS.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_SO_ROOT.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_SO_DEVC.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_END_OF_PBO.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>PROCESS AFTER INPUT.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_INIT_PAI_J.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>CHAIN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD  SO_ROOT-LOW.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD  SO_ROOT-HIGH.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_SO_ROOT.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>ENDCHAIN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>CHAIN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD  SO_DEVC-LOW.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD  SO_DEVC-HIGH.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_SO_DEVC.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>ENDCHAIN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>CHAIN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD  SO_ROOT-LOW.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD  SO_ROOT-HIGH.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD  SO_DEVC-LOW.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD  SO_DEVC-HIGH.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_BLOCK_0510001.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>ENDCHAIN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>CHAIN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD  SO_ROOT-LOW.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD  SO_ROOT-HIGH.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD  SO_DEVC-LOW.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD  SO_DEVC-HIGH.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_END_OF_SCREEN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_OK_CODE_1000.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>ENDCHAIN.</LINE>
-      </RPY_DYFLOW>
-     </FLOW_LOGIC>
-     <SPACES>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>2</item>
-      <item>0</item>
-      <item>0</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>4</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>0</item>
-     </SPACES>
-    </item>
-    <item>
-     <HEADER>
-      <PROGRAM>ZZ_UML_CLASS_EXPORT</PROGRAM>
-      <SCREEN>0520</SCREEN>
-      <LANGUAGE>D</LANGUAGE>
-      <DESCRIPT>SEL_SCREEN 0520 INFO:170000360000000000000000000126624248604</DESCRIPT>
-      <TYPE>J</TYPE>
-      <NEXTSCREEN>0520</NEXTSCREEN>
-      <CURSOR_POS>SEL_SCREEN 0520 INFO:170000360000000000000000000126624248604</CURSOR_POS>
-      <LINES>200</LINES>
-      <COLUMNS>120</COLUMNS>
-      <KEEP_SCPOS>X</KEEP_SCPOS>
-     </HEADER>
-     <CONTAINERS>
-      <RPY_DYCATT>
-       <TYPE>SCREEN</TYPE>
-       <NAME>SCREEN</NAME>
-      </RPY_DYCATT>
-     </CONTAINERS>
-     <FIELDS>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>FRAME_TMPL</TYPE>
-       <NAME>%BSC7001_BLOCK_0520</NAME>
-       <TEXT>___________________________________________________________________________________________________________________</TEXT>
-       <LINE>001</LINE>
-       <COLUMN>001</COLUMN>
-       <LENGTH>116</LENGTH>
-       <VISLENGTH>116</VISLENGTH>
-       <HEIGHT>006</HEIGHT>
-       <GROUP3>BLK</GROUP3>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>CHECK</TYPE>
-       <NAME>X_LOCL</NAME>
-       <LINE>002</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>PAR</GROUP3>
-       <GROUP4>002</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_X_LOCL_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <LINE>002</LINE>
-       <COLUMN>005</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>030</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>002</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELRIGHT>X</LABELRIGHT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>CHECK</TYPE>
-       <NAME>X_PROG</NAME>
-       <LINE>003</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>PAR</GROUP3>
-       <GROUP4>003</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_X_PROG_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <LINE>003</LINE>
-       <COLUMN>005</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>030</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>003</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELRIGHT>X</LABELRIGHT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>CHECK</TYPE>
-       <NAME>X_FUGR</NAME>
-       <LINE>004</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>PAR</GROUP3>
-       <GROUP4>004</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_X_FUGR_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <LINE>004</LINE>
-       <COLUMN>005</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>030</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>004</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELRIGHT>X</LABELRIGHT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>CHECK</TYPE>
-       <NAME>X_STRUCT</NAME>
-       <LINE>005</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>PAR</GROUP3>
-       <GROUP4>005</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_X_STRUCT_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <LINE>005</LINE>
-       <COLUMN>005</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>030</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>005</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELRIGHT>X</LABELRIGHT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEXT</TYPE>
-       <NAME>%_17NNJ0003943846_%_%_%_%_%_%_</NAME>
-       <TEXT>-</TEXT>
-       <LINE>007</LINE>
-       <COLUMN>001</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP4>SRI</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>OKCODE</TYPE>
-       <NAME>SSCRFIELDS-UCOMM</NAME>
-       <TEXT>______________________________________________________________________</TEXT>
-       <LENGTH>020</LENGTH>
-       <VISLENGTH>070</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <FORMAT>CHAR</FORMAT>
-       <FROM_DICT>X</FROM_DICT>
-       <FOREIGNKEY>X</FOREIGNKEY>
-       <INPUT_FLD>X</INPUT_FLD>
-      </RPY_DYFATC>
-     </FIELDS>
-     <FLOW_LOGIC>
-      <RPY_DYFLOW>
-       <LINE>PROCESS BEFORE OUTPUT.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_INIT_PBO_J.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_PBO_REPORT.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_PF_STATUS.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_END_OF_PBO.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>PROCESS AFTER INPUT.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_INIT_PAI_J.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>FIELD !X_LOCL MODULE %_X_LOCL .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>FIELD !X_PROG MODULE %_X_PROG .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>FIELD !X_FUGR MODULE %_X_FUGR .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>FIELD !X_STRUCT MODULE %_X_STRUCT .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>CHAIN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_LOCL .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_PROG .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_FUGR .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_STRUCT .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_BLOCK_0520001.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>ENDCHAIN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>CHAIN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_LOCL .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_PROG .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_FUGR .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_STRUCT .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_END_OF_SCREEN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_OK_CODE_1000.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>ENDCHAIN.</LINE>
-      </RPY_DYFLOW>
-     </FLOW_LOGIC>
-     <SPACES>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>2</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>4</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>0</item>
-     </SPACES>
-    </item>
-    <item>
-     <HEADER>
-      <PROGRAM>ZZ_UML_CLASS_EXPORT</PROGRAM>
-      <SCREEN>0530</SCREEN>
-      <LANGUAGE>D</LANGUAGE>
-      <DESCRIPT>SEL_SCREEN 0530 INFO:170000360000000000000000000126624248604</DESCRIPT>
-      <TYPE>J</TYPE>
-      <NEXTSCREEN>0530</NEXTSCREEN>
-      <CURSOR_POS>SEL_SCREEN 0530 INFO:170000360000000000000000000126624248604</CURSOR_POS>
-      <LINES>200</LINES>
-      <COLUMNS>120</COLUMNS>
-      <KEEP_SCPOS>X</KEEP_SCPOS>
-     </HEADER>
-     <CONTAINERS>
-      <RPY_DYCATT>
-       <TYPE>SCREEN</TYPE>
-       <NAME>SCREEN</NAME>
-      </RPY_DYCATT>
-     </CONTAINERS>
-     <FIELDS>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>FRAME_TMPL</TYPE>
-       <NAME>%BSC2001_BLOCK_0530</NAME>
-       <TEXT>___________________________________________________________________________________________________________________</TEXT>
-       <LINE>001</LINE>
-       <COLUMN>001</COLUMN>
-       <LENGTH>116</LENGTH>
-       <VISLENGTH>116</VISLENGTH>
-       <HEIGHT>013</HEIGHT>
-       <GROUP3>BLK</GROUP3>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>CHECK</TYPE>
-       <NAME>X_PRIV</NAME>
-       <LINE>002</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>PAR</GROUP3>
-       <GROUP4>002</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_X_PRIV_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <LINE>002</LINE>
-       <COLUMN>005</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>030</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>002</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELRIGHT>X</LABELRIGHT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>CHECK</TYPE>
-       <NAME>X_PROT</NAME>
-       <LINE>003</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>PAR</GROUP3>
-       <GROUP4>003</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_X_PROT_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <LINE>003</LINE>
-       <COLUMN>005</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>030</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>003</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELRIGHT>X</LABELRIGHT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>CHECK</TYPE>
-       <NAME>X_PACKS</NAME>
-       <LINE>004</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>PAR</GROUP3>
-       <GROUP4>004</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_X_PACKS_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <LINE>004</LINE>
-       <COLUMN>005</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>030</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>004</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELRIGHT>X</LABELRIGHT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>CHECK</TYPE>
-       <NAME>X_ATTR</NAME>
-       <LINE>005</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>PAR</GROUP3>
-       <GROUP4>005</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_X_ATTR_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <LINE>005</LINE>
-       <COLUMN>005</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>030</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>005</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELRIGHT>X</LABELRIGHT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>CHECK</TYPE>
-       <NAME>X_CONS</NAME>
-       <LINE>006</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>PAR</GROUP3>
-       <GROUP4>006</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_X_CONS_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <LINE>006</LINE>
-       <COLUMN>005</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>030</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>006</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELRIGHT>X</LABELRIGHT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>CHECK</TYPE>
-       <NAME>X_METH</NAME>
-       <LINE>007</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>PAR</GROUP3>
-       <GROUP4>007</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_X_METH_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <LINE>007</LINE>
-       <COLUMN>005</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>030</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>007</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELRIGHT>X</LABELRIGHT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>CHECK</TYPE>
-       <NAME>X_USES</NAME>
-       <LINE>008</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>PAR</GROUP3>
-       <GROUP4>008</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_X_USES_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <LINE>008</LINE>
-       <COLUMN>005</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>030</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>008</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELRIGHT>X</LABELRIGHT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>CHECK</TYPE>
-       <NAME>X_FRND</NAME>
-       <LINE>009</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>PAR</GROUP3>
-       <GROUP4>009</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_X_FRND_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <LINE>009</LINE>
-       <COLUMN>005</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>030</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>009</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELRIGHT>X</LABELRIGHT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>CHECK</TYPE>
-       <NAME>X_EXCEP</NAME>
-       <LINE>010</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>PAR</GROUP3>
-       <GROUP4>010</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_X_EXCEP_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <LINE>010</LINE>
-       <COLUMN>005</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>030</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>010</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELRIGHT>X</LABELRIGHT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>CHECK</TYPE>
-       <NAME>X_ASOS</NAME>
-       <LINE>011</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>PAR</GROUP3>
-       <GROUP4>011</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_X_ASOS_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <LINE>011</LINE>
-       <COLUMN>005</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>030</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>011</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELRIGHT>X</LABELRIGHT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>CHECK</TYPE>
-       <NAME>X_AGGR</NAME>
-       <LINE>012</LINE>
-       <COLUMN>003</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>PAR</GROUP3>
-       <GROUP4>012</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEMPLATE</TYPE>
-       <NAME>%_X_AGGR_%_APP_%-TEXT</NAME>
-       <TEXT>______________________________</TEXT>
-       <LINE>012</LINE>
-       <COLUMN>005</COLUMN>
-       <LENGTH>030</LENGTH>
-       <VISLENGTH>030</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP3>TXT</GROUP3>
-       <GROUP4>012</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <UP_LOWER>X</UP_LOWER>
-       <OUTPUT_FLD>X</OUTPUT_FLD>
-       <OUTPUTONLY>X</OUTPUTONLY>
-       <REQU_ENTRY>N</REQU_ENTRY>
-       <LABELRIGHT>X</LABELRIGHT>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>TEXT</TYPE>
-       <NAME>%_17NNJ0003943846_%_%_%_%_%_%_</NAME>
-       <TEXT>-</TEXT>
-       <LINE>014</LINE>
-       <COLUMN>001</COLUMN>
-       <LENGTH>001</LENGTH>
-       <VISLENGTH>001</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <GROUP4>SRI</GROUP4>
-       <FORMAT>CHAR</FORMAT>
-       <INPUT_FLD>X</INPUT_FLD>
-      </RPY_DYFATC>
-      <RPY_DYFATC>
-       <CONT_TYPE>SCREEN</CONT_TYPE>
-       <CONT_NAME>SCREEN</CONT_NAME>
-       <TYPE>OKCODE</TYPE>
-       <NAME>SSCRFIELDS-UCOMM</NAME>
-       <TEXT>______________________________________________________________________</TEXT>
-       <LENGTH>020</LENGTH>
-       <VISLENGTH>070</VISLENGTH>
-       <HEIGHT>001</HEIGHT>
-       <FORMAT>CHAR</FORMAT>
-       <FROM_DICT>X</FROM_DICT>
-       <FOREIGNKEY>X</FOREIGNKEY>
-       <INPUT_FLD>X</INPUT_FLD>
-      </RPY_DYFATC>
-     </FIELDS>
-     <FLOW_LOGIC>
-      <RPY_DYFLOW>
-       <LINE>PROCESS BEFORE OUTPUT.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_INIT_PBO_J.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_PBO_REPORT.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_PF_STATUS.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_END_OF_PBO.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>PROCESS AFTER INPUT.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_INIT_PAI_J.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>FIELD !X_PRIV MODULE %_X_PRIV .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>FIELD !X_PROT MODULE %_X_PROT .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>FIELD !X_PACKS MODULE %_X_PACKS .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>FIELD !X_ATTR MODULE %_X_ATTR .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>FIELD !X_CONS MODULE %_X_CONS .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>FIELD !X_METH MODULE %_X_METH .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>FIELD !X_USES MODULE %_X_USES .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>FIELD !X_FRND MODULE %_X_FRND .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>FIELD !X_EXCEP MODULE %_X_EXCEP .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>FIELD !X_ASOS MODULE %_X_ASOS .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>FIELD !X_AGGR MODULE %_X_AGGR .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>CHAIN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_PRIV .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_PROT .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_PACKS .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_ATTR .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_CONS .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_METH .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_USES .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_FRND .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_EXCEP .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_ASOS .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_AGGR .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_BLOCK_0530001.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>ENDCHAIN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW/>
-      <RPY_DYFLOW>
-       <LINE>CHAIN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_PRIV .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_PROT .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_PACKS .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_ATTR .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_CONS .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_METH .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_USES .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_FRND .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_EXCEP .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_ASOS .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>FIELD X_AGGR .</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_END_OF_SCREEN.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>MODULE %_OK_CODE_1000.</LINE>
-      </RPY_DYFLOW>
-      <RPY_DYFLOW>
-       <LINE>ENDCHAIN.</LINE>
-      </RPY_DYFLOW>
-     </FLOW_LOGIC>
-     <SPACES>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>2</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>4</item>
-      <item>0</item>
-      <item>0</item>
-      <item>0</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>2</item>
-      <item>0</item>
-     </SPACES>
-    </item>
-   </DYNPROS>
    <TPOOL>
     <item>
      <ID>I</ID>
@@ -1594,114 +65,114 @@
     <item>
      <ID>R</ID>
      <ENTRY>Report ZZ_UML_CLASS_EXPORT</ENTRY>
-     <LENGTH>26</LENGTH>
+     <LENGTH>70</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>SO_DEVC</KEY>
      <ENTRY>Package</ENTRY>
-     <LENGTH>15</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>SO_ROOT</KEY>
      <ENTRY>Object Name</ENTRY>
-     <LENGTH>19</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>X_AGGR</KEY>
      <ENTRY>Aggregations (&lt;&gt;--)</ENTRY>
-     <LENGTH>27</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>X_ASOS</KEY>
      <ENTRY>Associations (--&gt;)</ENTRY>
-     <LENGTH>26</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>X_ATTR</KEY>
      <ENTRY>List Attributes</ENTRY>
-     <LENGTH>23</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>X_CONS</KEY>
      <ENTRY>Display Constants</ENTRY>
-     <LENGTH>25</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>X_EXCEP</KEY>
      <ENTRY>Exceptions (&lt;&lt;throws</ENTRY>
-     <LENGTH>28</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>X_FRND</KEY>
      <ENTRY>Friends</ENTRY>
-     <LENGTH>15</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>X_FUGR</KEY>
      <ENTRY>Analyze Function Gr</ENTRY>
-     <LENGTH>27</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>X_LOCL</KEY>
      <ENTRY>Analyze Local Objec</ENTRY>
-     <LENGTH>27</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>X_METH</KEY>
      <ENTRY>List Methods</ENTRY>
-     <LENGTH>20</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>X_PACKS</KEY>
      <ENTRY>Package Member (~)</ENTRY>
-     <LENGTH>26</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>X_PRIV</KEY>
      <ENTRY>Private Member  (-)</ENTRY>
-     <LENGTH>27</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>X_PROG</KEY>
      <ENTRY>Analyze Program</ENTRY>
-     <LENGTH>23</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>X_PROT</KEY>
      <ENTRY>Protected Member (#)</ENTRY>
-     <LENGTH>28</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>X_STRUCT</KEY>
      <ENTRY>Structures  (&lt;&lt;data Type&gt;&gt;)</ENTRY>
-     <LENGTH>35</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
     <item>
      <ID>S</ID>
      <KEY>X_USES</KEY>
      <ENTRY>Dependency (&lt;&lt;uses&gt;&gt;)</ENTRY>
-     <LENGTH>29</LENGTH>
+     <LENGTH>38</LENGTH>
     </item>
    </TPOOL>
    <I18N_TPOOL>
     <item>
-     <LANGUAGE>E</LANGUAGE>
+     <LANGUAGE>D</LANGUAGE>
      <TEXTPOOL>
       <item>
        <ID>I</ID>
@@ -1754,109 +225,109 @@
       <item>
        <ID>R</ID>
        <ENTRY>Report ZZ_UML_CLASS_EXPORT</ENTRY>
-       <LENGTH>70</LENGTH>
+       <LENGTH>26</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>SO_DEVC</KEY>
        <ENTRY>Package</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>15</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>SO_ROOT</KEY>
        <ENTRY>Object Name</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>19</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>X_AGGR</KEY>
        <ENTRY>Aggregations (&lt;&gt;--)</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>27</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>X_ASOS</KEY>
        <ENTRY>Associations (--&gt;)</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>26</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>X_ATTR</KEY>
        <ENTRY>List Attributes</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>23</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>X_CONS</KEY>
        <ENTRY>Display Constants</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>25</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>X_EXCEP</KEY>
        <ENTRY>Exceptions (&lt;&lt;throws</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>28</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>X_FRND</KEY>
        <ENTRY>Friends</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>15</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>X_FUGR</KEY>
        <ENTRY>Analyze Function Gr</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>27</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>X_LOCL</KEY>
        <ENTRY>Analyze Local Objec</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>27</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>X_METH</KEY>
        <ENTRY>List Methods</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>20</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>X_PACKS</KEY>
        <ENTRY>Package Member (~)</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>26</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>X_PRIV</KEY>
        <ENTRY>Private Member  (-)</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>27</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>X_PROG</KEY>
        <ENTRY>Analyze Program</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>23</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>X_PROT</KEY>
        <ENTRY>Protected Member (#)</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>28</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>X_STRUCT</KEY>
        <ENTRY>Structures  (&lt;&lt;data Type&gt;&gt;)</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>35</LENGTH>
       </item>
       <item>
        <ID>S</ID>
        <KEY>X_USES</KEY>
        <ENTRY>Dependency (&lt;&lt;uses&gt;&gt;)</ENTRY>
-       <LENGTH>38</LENGTH>
+       <LENGTH>29</LENGTH>
       </item>
      </TEXTPOOL>
     </item>
