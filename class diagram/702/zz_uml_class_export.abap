@@ -1,5 +1,5 @@
 *&---------------------------------------------------------------------*
-"! UML Class XMI exporter (inspired by program UML_CLASS_DIAGRAM)
+"! UML Class PlantUML exporter (inspired by program UML_CLASS_DIAGRAM)
 "! Installation of JNET is not required.
 REPORT zz_uml_class_export.
 
@@ -117,9 +117,11 @@ TYPES: BEGIN OF ts_diagram_config,
          output_mode       TYPE char01,
          skip_dialog       TYPE flag,
          scale             TYPE tv_scale,
+         shadowing      TYPE flag,
+         display_source TYPE flag,
+         hpages         TYPE sytabix,
+         vpages         TYPE sytabix,
          handwritten       TYPE flag,
-         shadowing         TYPE flag,
-         display_source    TYPE flag,
        END OF ts_diagram_config.
 
 *----------------------------------------------------------------------*
@@ -225,7 +227,8 @@ CLASS lcl_uml_class DEFINITION FRIENDS lif_unit_test.
     TYPES ts_uml TYPE lcl_iterator=>ts_uml.
 
     METHODS constructor IMPORTING io_uml        TYPE REF TO lcl_uml
-                                  is_uml_config TYPE ts_uml_config.
+                                  is_uml_config TYPE ts_uml_config
+                                  is_scan_config TYPE ts_scan_config.
     METHODS to_uml_text IMPORTING is_uml TYPE ts_uml.
   PRIVATE SECTION.
     METHODS plant_uml_class.
@@ -243,7 +246,7 @@ CLASS lcl_uml_class DEFINITION FRIENDS lif_unit_test.
                                  iv_sep    TYPE char3
                                  iv_suffix TYPE csequence OPTIONAL
                                  iv_active TYPE xsdboolean DEFAULT abap_true.
-    METHODS begin_class.
+    METHODS begin_class RETURNING VALUE(rv_flag) TYPE flag.
     METHODS end_class.
 
     METHODS class_member.
@@ -263,6 +266,7 @@ CLASS lcl_uml_class DEFINITION FRIENDS lif_unit_test.
     DATA ms_uml TYPE ts_uml.
     DATA mv_name TYPE string.
     DATA ms_config TYPE ts_uml_config.
+    DATA ms_scan_cfg TYPE ts_scan_config.
 ENDCLASS.                    "lcl_uml_class DEFINITION
 
 *----------------------------------------------------------------------*
@@ -350,6 +354,7 @@ CLASS lcl_plant_uml DEFINITION.
                                        is_cfg TYPE ts_diagram_config
                              RETURNING value(rv_param) TYPE string.
     METHODS show_html IMPORTING iv_html TYPE string
+                                iv_size TYPE string DEFAULT cl_abap_browser=>xlarge
                       RAISING   cx_dynamic_check.
     METHODS to_png IMPORTING io_name        TYPE REF TO lcl_file_name
                              is_cfg TYPE ts_diagram_config
@@ -412,10 +417,12 @@ CLASS lcl_class_diagram DEFINITION INHERITING FROM lcl_iterator
       IMPORTING it_uml            TYPE tt_uml
                 is_output_config  TYPE ts_diagram_config
                 is_uml_config     TYPE ts_uml_config
+                is_scan_config    TYPE ts_scan_config
       RETURNING value(rv_diagram) TYPE string.
   PRIVATE SECTION.
     METHODS to_uml_text IMPORTING is_uml_config TYPE ts_uml_config
                                   is_output_config TYPE ts_diagram_config
+                                  is_scan_config TYPE ts_scan_config
                         RETURNING value(rv_diagram) TYPE string.
 ENDCLASS.                    "lcl_class_diagram DEFINITION
 
@@ -458,8 +465,10 @@ CLASS lcl_configuration DEFINITION CREATE PRIVATE FRIENDS lif_unit_test.
              skip_dialog       TYPE flag,
              scale             TYPE perct,
              handwritten       TYPE flag,
-             shadowing         TYPE flag,
-             display_source    TYPE flag,
+             shadowing      TYPE flag,
+             display_source TYPE flag,
+             hpages         TYPE i,
+             vpages         TYPE i,
            END OF ts_param.
     METHODS get_attributes RETURNING value(rt_attr) TYPE sci_atttab.
     METHODS to_radiobutton.
@@ -720,7 +729,7 @@ CLASS lcl_plant_uml IMPLEMENTATION.
 
   METHOD show_html.
     cl_abap_browser=>show_html( html_string = iv_html
-                                size = cl_abap_browser=>xlarge
+                                size = iv_size
                                 context_menu = abap_true ).
   ENDMETHOD.                    "show_html
 
@@ -815,6 +824,7 @@ CLASS lcl_uml_class IMPLEMENTATION.
     super->constructor( ).
     mo_uml = io_uml.
     ms_config = is_uml_config.
+    ms_scan_cfg = is_scan_config.
   ENDMETHOD.                    "constructor
 
   METHOD to_uml_text.
@@ -829,7 +839,13 @@ CLASS lcl_uml_class IMPLEMENTATION.
   ENDMETHOD.                    "set_data
 
   METHOD begin_class.
-    mo_uml->add( |{ get_class( ) } \{\n| ).
+    DATA lv_name TYPE string.
+
+    rv_flag = abap_false.
+    lv_name = get_class( ).
+    CHECK lv_name IS NOT INITIAL.
+    mo_uml->add( |{ lv_name } \{\n| ).
+    rv_flag = abap_true.
   ENDMETHOD.                    "begin_class
 
   METHOD end_class.
@@ -841,10 +857,10 @@ CLASS lcl_uml_class IMPLEMENTATION.
   ENDMETHOD.                    "class_member
 
   METHOD plant_uml_class.
-    CHECK mv_name IS NOT INITIAL.
-    begin_class( ).
+    CHECK mv_name IS NOT INITIAL AND begin_class( ) EQ abap_true.
     uml_fields( ).
     uml_methods( ).
+    uml_events( ).
     end_class( ).
 
     IF ms_uml-supertype IS NOT INITIAL.
@@ -880,6 +896,12 @@ CLASS lcl_uml_class IMPLEMENTATION.
 
   METHOD get_class.
     DATA lv_prefix TYPE string.
+    CLEAR rv_class.
+    IF find( val = ms_uml-name sub = '\FUGR=' ) GE 0.
+      IF ms_scan_cfg-scan_function_groups EQ abap_true.
+        rv_class = |class { mv_name } << (F,#FF7700) FuGr >>|.
+      ENDIF.
+    ELSE.
     IF find( val = ms_uml-name sub = '\INTERFACE=' ) GE 0.
       lv_prefix = |interface|.
     ELSEIF ms_uml-is_abstract IS NOT INITIAL.
@@ -890,6 +912,7 @@ CLASS lcl_uml_class IMPLEMENTATION.
     rv_class = |{ lv_prefix } { mv_name }|.
     IF ms_uml-container IS NOT INITIAL AND ms_uml-is_local EQ abap_true.
       rv_class = |{ lv_prefix } "{ mv_name }\\n({ get_container( ) })" as { mv_name }|.
+    ENDIF.
     ENDIF.
   ENDMETHOD.                    "get_class
 
@@ -903,10 +926,10 @@ CLASS lcl_uml_class IMPLEMENTATION.
     DATA lv_vis TYPE char01.
 
     CASE iv_visibility.
-      WHEN c_vis_private. lv_vis = '-'.
+      WHEN c_vis_private.   lv_vis = '-'.
       WHEN c_vis_protected. lv_vis = '#'.
-      WHEN c_vis_package. lv_vis = '~'.
-      WHEN c_vis_public. lv_vis = '+'.
+      WHEN c_vis_package.   lv_vis = '~'.
+      WHEN c_vis_public.    lv_vis = '+'.
     ENDCASE.
     mo_uml->add( |{ lv_vis }| ).
   ENDMETHOD.                    "visibility
@@ -924,10 +947,14 @@ CLASS lcl_uml_class IMPLEMENTATION.
 
   METHOD uml_reduce.
     FIELD-SYMBOLS <lv_line> TYPE csequence.
+    DATA lv_prefix TYPE string.
 
     CHECK iv_active EQ abap_true.
     LOOP AT it_data ASSIGNING <lv_line>.
-      mo_uml->add( |{ escape( mv_name ) } { iv_sep } { escape( get_name( <lv_line> ) ) }{ iv_suffix }\n| ).
+      AT FIRST.
+        lv_prefix = escape( mv_name ) && ` ` && iv_sep.
+      ENDAT.
+      mo_uml->add( |{ lv_prefix } { escape( get_name( <lv_line> ) ) }{ iv_suffix }\n| ).
     ENDLOOP.
   ENDMETHOD.                    "uml_reduce
 
@@ -943,7 +970,7 @@ CLASS lcl_uml_class IMPLEMENTATION.
 
   METHOD uml_fields.
     DATA ls_field LIKE LINE OF ms_uml-t_attributes.
-
+    CHECK ms_scan_cfg-attributes EQ abap_true.
     LOOP AT ms_uml-t_attributes INTO ls_field WHERE is_constant EQ space.
       uml_add( iv_visibility = ls_field-visibility
                iv_class = ls_field-is_class
@@ -953,6 +980,7 @@ CLASS lcl_uml_class IMPLEMENTATION.
 
   METHOD uml_methods.
     DATA ls_method LIKE LINE OF ms_uml-t_methods.
+    CHECK ms_scan_cfg-methods EQ abap_true.
     LOOP AT ms_uml-t_methods INTO ls_method.
       uml_add( iv_abstract = ls_method-is_abstract
                iv_visibility = ls_method-visibility
@@ -976,7 +1004,8 @@ CLASS lcl_class_diagram IMPLEMENTATION.
         it_data = it_uml.
 
     rv_diagram = lo_diagram->to_uml_text( is_output_config = is_output_config
-                                          is_uml_config = is_uml_config ).
+                                          is_uml_config = is_uml_config
+                                          is_scan_config = is_scan_config ).
   ENDMETHOD.                    "generate
 
   METHOD to_uml_text.
@@ -987,7 +1016,8 @@ CLASS lcl_class_diagram IMPLEMENTATION.
     CREATE OBJECT lo_class
       EXPORTING
         io_uml        = lo_uml
-        is_uml_config = is_uml_config.
+        is_uml_config = is_uml_config
+        is_scan_config = is_scan_config.
     WHILE has_next( ) EQ abap_true.
       lo_class->to_uml_text( next( ) ).
     ENDWHILE.
@@ -1019,6 +1049,7 @@ CLASS lcl_uml IMPLEMENTATION.
   METHOD header.
     add( |@startuml\n| ).   " Header
     add( |scale { is_cfg-scale }\n| ).   " Reduce the size of the output image
+    add( |page { is_cfg-hpages }x{ is_cfg-vpages }\n| ).  " split if n files
   ENDMETHOD.                    "header
 
   METHOD footer.
@@ -1143,7 +1174,8 @@ CLASS lcl_plantuml_output IMPLEMENTATION.
         CREATE OBJECT lo_plant_uml
           EXPORTING iv_diagram = lcl_class_diagram=>generate( it_uml = lr_uml_tab->*
                                                               is_uml_config = ii_parameter->get_display_config( )
-                                                              is_output_config = ls_cfg ).
+                                                              is_output_config = ls_cfg
+                                                              is_scan_config = ii_parameter->get_scan_config( )  ).
         lo_plant_uml->output( ls_cfg ).
         rv_flag = abap_true.
       CATCH cx_dynamic_check.                           "#EC NO_HANDLER
@@ -1185,6 +1217,8 @@ CLASS lcl_configuration IMPLEMENTATION.
     gs_cfg-handwritten = abap_false.
     gs_cfg-shadowing = abap_false.
     gs_cfg-display_source = abap_true.
+    gs_cfg-hpages = 1.
+    gs_cfg-vpages = 1.
 *   Windows: Local Java installation
     IF gs_cfg-java_appl IS INITIAL.
       gs_cfg-java_appl = `C:\Windows\System32\java`.
@@ -1250,7 +1284,10 @@ CLASS lcl_configuration IMPLEMENTATION.
                 mv_mode_exe   'Local PlantUML '(c13)       'MOD'.
 
     fill_att: ''              'PlantUML Settings'(c20)         'G',
-              gs_cfg-scale       'Scale '(c21)                 'S'.
+              gs_cfg-scale       'Scale '(c21)                 'S',
+              gs_cfg-hpages      'H-Pages '(c22)               'S',
+              gs_cfg-vpages      'V-Pages '(c23)               'S'.
+
     fill_att: gs_cfg-server_url  'PlantUML Server'(c25)         'S',
               gs_cfg-local_path  'Local PlantUML path'(c26)     'S',
               gs_cfg-java_jar    'Local PlantUML jar file'(c27) ' ',
