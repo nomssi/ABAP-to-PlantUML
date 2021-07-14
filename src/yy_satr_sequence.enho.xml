@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_ENHO" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TOOL>HOOK_IMPL</TOOL>
+   <SHORTTEXT>PlantUML Sequence diagram</SHORTTEXT>
+   <ORIGINAL_OBJECT>
+    <PGMID>R3TR</PGMID>
+    <ORG_OBJ_TYPE>CLAS</ORG_OBJ_TYPE>
+    <ORG_OBJ_NAME>CL_ATRA_UML_HANDLING</ORG_OBJ_NAME>
+    <ORG_MAIN_TYPE>CLAS</ORG_MAIN_TYPE>
+    <ORG_MAIN_NAME>CL_ATRA_UML_HANDLING</ORG_MAIN_NAME>
+    <PROGRAMNAME>CL_ATRA_UML_HANDLING==========CP</PROGRAMNAME>
+   </ORIGINAL_OBJECT>
+   <ENHANCEMENTS>
+    <ENH_HOOK_IMPL>
+     <PROGRAMNAME>CL_ATRA_UML_HANDLING==========CP</PROGRAMNAME>
+     <ENHMODE>S</ENHMODE>
+     <FULL_NAME>\PR:CL_ATRA_UML_HANDLING==========CP\IC:CL_ATRA_UML_HANDLING==========CCIMP\SE:END\EI</FULL_NAME>
+     <SOURCE>
+      <item>  INCLUDE YY_SATRA_INCLUDE.</item>
+     </SOURCE>
+    </ENH_HOOK_IMPL>
+    <ENH_HOOK_IMPL>
+     <PROGRAMNAME>CL_ATRA_UML_HANDLING==========CP</PROGRAMNAME>
+     <ENHMODE>D</ENHMODE>
+     <FULL_NAME>\TY:CL_ATRA_UML_HANDLING\ME:SHOW_SEQ_DIAGRAM\SE:BEGIN\EI</FULL_NAME>
+     <SOURCE>
+      <item>  TRY.</item>
+      <item>      lcl_sequence=&gt;to_diagram( lcl_configuration=&gt;query( ) )-&gt;output( ).</item>
+      <item>    CATCH cx_dynamic_check INTO DATA(gx_error).</item>
+      <item>      MESSAGE gx_error TYPE &apos;I&apos; DISPLAY LIKE &apos;E&apos;.  &quot;#EC CI_USE_WANTED</item>
+      <item>  ENDTRY.</item>
+      <item>  RETURN.</item>
+     </SOURCE>
+    </ENH_HOOK_IMPL>
+   </ENHANCEMENTS>
+   <SOTR>
+    <item>
+     <HEADER>
+      <CONCEPT>0242AC1100021EDBB28DEF8B2A80C715</CONCEPT>
+      <CREA_LAN>E</CREA_LAN>
+      <TRALA_TYPE>1</TRALA_TYPE>
+      <OBJID_VEC>AAI=</OBJID_VEC>
+     </HEADER>
+     <ENTRIES>
+      <SOTR_TEXT>
+       <CONCEPT>0242AC1100021EDBB28DEF8B2A80C715</CONCEPT>
+       <LANGU>E</LANGU>
+       <LFD_NUM>0001</LFD_NUM>
+       <FLAG_CNTXT>X</FLAG_CNTXT>
+       <STATUS>R</STATUS>
+       <LENGTH>038</LENGTH>
+       <TEXT>PlantUML Sequence diagram</TEXT>
+      </SOTR_TEXT>
+     </ENTRIES>
+    </item>
+   </SOTR>
+   <SOTR_USE>
+    <SOTR_USE>
+     <PGMID>R3TR</PGMID>
+     <OBJECT>ENHO</OBJECT>
+     <OBJ_NAME>YY_SATR_SEQUENCE</OBJ_NAME>
+     <CONCEPT>0242AC1100021EDBB28DEF8B2A80C715</CONCEPT>
+     <LFD_NUM>0001</LFD_NUM>
+    </SOTR_USE>
+   </SOTR_USE>
+  </asx:values>
+ </asx:abap>
+</abapGit>
