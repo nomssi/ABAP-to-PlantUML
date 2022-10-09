@@ -20,6 +20,8 @@ https://blogs.sap.com/2017/04/27/plantuml-diagrams/
 ## Sequence Diagram from ABAP Trace
 https://wiki.scn.sap.com/wiki/display/Snippets/ABAP+Trace+to+PlantUML+Sequence+Diagram
 
+https://blogs.sap.com/2022/10/09/abap-trace-to-plantuml-sequence-diagram/
+
 Transaction SAT records the execution of an ABAP program and provides analysis tools for performance, program flow and memory consumption. Measurements can be imported from other SAP systems using either download/upload or RFC. Since SAP Netweaver 7.02, an UML sequence diagram can be generated if the measurement was recorded without aggregation.
 
  - Start transaction SAT -> Evaluate -> Double Click on a measurement; on the next screen press F8 (Display measurement as UML sequence diagram)
