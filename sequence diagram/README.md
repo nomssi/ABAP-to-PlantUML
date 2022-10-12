@@ -3,7 +3,7 @@ Class **CL_ATRA_UML_HANDLING** controls the generation of an UML sequence diagra
 ## Setup
 Three steps are needed to override the standard behavior:
 
-1. Create a new Include YY_SATRA_INCLUDE using the code corresponging to you Netweaver release 7.31, 7.40 or later
+1. Create a new Include YY_SATRA_INCLUDE using the code corresponging to your Netweaver release 7.31, 7.40 or later
 
 2. In class builder for class CL_ATRA_UML_HANDLING 
 
