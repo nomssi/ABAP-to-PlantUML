@@ -299,15 +299,17 @@ ENDCLASS.
 TYPES tv_scale TYPE perct.
 CONSTANTS c_default_scale TYPE tv_scale VALUE '0.5'.
 TYPES: BEGIN OF ts_diagram_config,
-         local_path        TYPE string,
-         java_jar          TYPE string,
-         java_appl         TYPE string,
-         server_url        TYPE string,
+         local_path        TYPE localfile,
+         java_jar          TYPE localfile,
+         java_appl         TYPE localfile,
+         server_url        TYPE localfile,
          output_mode       TYPE char01,
          skip_dialog       TYPE flag,
          compact_trace     TYPE flag,
          system_events     TYPE flag,
-         scale             TYPE tv_scale,
+         scale             TYPE perct,  " tv_scale  fix: local type not allowed in dyn. select
+         hpages            TYPE i,
+         vpages            TYPE i,
          pattern           TYPE sci_pattern,
          handwritten       TYPE flag,
          shadowing         TYPE flag,
@@ -393,7 +395,7 @@ CLASS lcl_diagram_plant_uml DEFINITION INHERITING FROM lcl_diagram_text FRIENDS 
       c_charset_standard TYPE tv_base64 VALUE 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=' ##NO_TEXT,
       c_charset_plantuml TYPE tv_base64 VALUE '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_0' ##NO_TEXT.
 
-    METHODS to_url IMPORTING iv_base_url   TYPE string
+    METHODS to_url IMPORTING iv_base_url   TYPE csequence
                    RETURNING VALUE(rv_url) TYPE string
                    RAISING   cx_dynamic_check.
     METHODS to_png IMPORTING io_name        TYPE REF TO lcl_file_name
@@ -424,25 +426,9 @@ CLASS lcl_configuration DEFINITION CREATE PRIVATE FRIENDS lif_unit_test.
       query RETURNING VALUE(rs_cfg) TYPE ts_diagram_config,
       class_constructor.
   PRIVATE SECTION.
-    TYPES: BEGIN OF ts_param,
-             local_path        TYPE localfile,
-             java_jar          TYPE localfile,
-             java_appl         TYPE localfile,
-             server_url        TYPE localfile,
-             output_mode       TYPE char01,
-             skip_dialog       TYPE flag,
-             compact_trace     TYPE flag,
-             system_events     TYPE flag,
-             scale             TYPE perct,
-             handwritten       TYPE flag,
-             shadowing         TYPE flag,
-             teoz_architecture TYPE flag,
-             display_source    TYPE flag,
-             pattern           TYPE sci_pattern,
-             uml_format        TYPE int4,
-             progress          TYPE flag,
-             browser_size      TYPE string,
-           END OF ts_param.
+
+    TYPES: ts_param TYPE ts_diagram_config.
+
     METHODS get_attributes RETURNING VALUE(rt_attr) TYPE sci_atttab.
     METHODS to_radiobutton.
     METHODS from_radiobutton.
@@ -1420,7 +1406,8 @@ CLASS lcl_uml_plant IMPLEMENTATION.
 
   METHOD parameters.
     CLEAR mv_param.
-    add_param( scale( is_cfg ) ).                   " Reduce the size of the output image
+    add_param( scale( is_cfg ) ).                               " Reduce the size of the output image
+    add_param( |page { is_cfg-hpages }x{ is_cfg-vpages }\n| ).  " split if n files
     add_param( iv_cond = is_cfg-teoz_architecture
                iv_command = |!pragma teoz true\n| ).
     add_param( |skinparam \{\n| ).
@@ -1439,8 +1426,7 @@ CLASS lcl_uml_plant IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD call.
-    add( |{ is_message-caller } -> { is_message-called }: { mi_actors->short_text( is_message ) }\n| ).
-    add( |activate { is_message-called }\n| ).
+    add( |{ is_message-caller } -> { is_message-called } ++ : { mi_actors->short_text( is_message ) }\n| ).
   ENDMETHOD.
 
   METHOD return.
@@ -2075,7 +2061,7 @@ CLASS lcl_diagram_plant_uml IMPLEMENTATION.
 
   METHOD to_png.
     CLEAR rv_name.
-    cl_gui_frontend_services=>execute( EXPORTING application = ms_cfg-java_appl
+    cl_gui_frontend_services=>execute( EXPORTING application = CONV string( ms_cfg-java_appl )
                                                  parameter = parameter_string( io_name )
                                                  synchronous = 'X'
                                        EXCEPTIONS OTHERS = 1 ).
@@ -2105,8 +2091,13 @@ CLASS lcl_diagram_plant_uml IMPLEMENTATION.
     TRY.
         DATA(lv_base) = registry_local( iv_key = c_java_base_key
                                         iv_value = 'CurrentVersion' ).
-        rv_path = |{ registry_local( iv_key = |{ c_java_base_key }\\{ lv_base }|
-                                     iv_value = 'JavaHome' ) }\\bin\\java|.
+        DATA(lv_prefix) = registry_local( iv_key = |{ c_java_base_key }\\{ lv_base }|
+                                          iv_value = 'JavaHome' ).
+        IF lv_prefix IS NOT INITIAL.
+          rv_path = |{ lv_prefix }\\bin\\java|.
+        ELSE.
+          rv_path = |java|.          " assume JAVA_HOME is added to the path
+        ENDIF.
       CATCH cx_dynamic_check.
         CLEAR rv_path.
     ENDTRY.
@@ -2162,7 +2153,9 @@ CLASS lcl_configuration IMPLEMENTATION.
                       skip_dialog = space
                       compact_trace = abap_true
                       scale = c_default_scale
-                      pattern = VALUE #( ( 'Y*' ) ( 'Z*' ) ( '/BAY*' ) )
+                      vpages = 1
+                      hpages = 1
+                      pattern = VALUE #( ( 'Y*' ) ( 'Z*' ) )
                       progress = abap_true
                       handwritten = abap_false
                       shadowing = abap_false
@@ -2204,7 +2197,9 @@ CLASS lcl_configuration IMPLEMENTATION.
                   mv_mode_exe            'Local PlantUML '(c13)       'MOD'.
 
     m_fill_att: ''                       'PlantUML Settings'(c20)       'G',
-                gs_cfg-scale             'Scale '(c21)                  'S'.
+                gs_cfg-scale             'Scale '(c21)                  'S',
+                gs_cfg-hpages            'H-Pages '(c22)                'S',
+                gs_cfg-vpages            'V-Pages '(c23)                'S'.
 
     m_fill_att: gs_cfg-server_url        'PlantUML Server'(c25)         'S',
                 gs_cfg-local_path        'Local PlantUML path'(c26)     'S',
